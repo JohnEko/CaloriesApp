@@ -1,0 +1,113 @@
+body{
+    border: 10px;
+}
+
+nav{
+    color :greenyellow;
+    text-align: center;
+}
+
+h1{
+    color : greenyellow;
+    background-color: rgb(77, 114, 170);
+    margin-top: 0px !important;
+    padding: 20px 0px 20px 0px;
+ 
+}
+
+
+#home-icon{
+    float: right;
+    padding : 20px;
+    font-size: 30px;
+
+    
+
+}
+
+#search-icon{
+    float: right;
+    padding : 20px 3px;
+    font-size: 30px;
+   
+    
+}
+
+#settings-icon{
+    float :left;
+    padding: 20px;
+    font-size : 30px;
+}
+
+#circle-icon{
+    float :left;
+    padding: 20px 3px;
+    font-size : 30px;
+}
+
+
+.container{
+    float : right;
+    width :20%;
+
+}
+
+.box-container{
+    width : 78%;
+    border-right: 20px;
+    margin-left: 20px;
+}
+
+.box{
+    background: #c2c9ca;
+    border: grey;
+    margin : 20px 0;
+    
+}
+
+.nutrient {
+    margin: auto;
+    float: right;
+    width: 27%;
+   
+    
+    
+}
+
+h2{
+    background-color :  #959b9c;
+    padding-bottom:  10%;
+    margin: 0px  auto !important;
+  
+}
+
+.fact{
+    background-color: lawngreen;
+    margin-top: 0px  auto !important;
+    padding:  23% 3%;
+   
+}
+
+img {  /* to resize the image*/
+    float :left;
+    width: 70%;
+    height: 455px;
+    font-size: 1px;   
+
+}
+
+.box-1 {
+    background-color: #333;
+    width : 78%;
+    border-right: 20px;
+    display: inline-block;
+    
+    
+    
+}
+.box-row{
+    margin: 10px 35px 10px 15px;
+    padding: 25px 10px 15px 10px;
+    
+
+}

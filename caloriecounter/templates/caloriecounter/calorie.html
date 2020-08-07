@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+
+<head>
+
+    <title>Calories</title>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/>
+    <script src="{% static 'javascript/main.js' %}" ></script>
+    
+</head>
+<body>
+
+    
+
+    <div class="main-container">
+
+        <nav>
+            <i id="home-icon" class="fa fa-home"></i>
+            <i id="search-icon" class="fa fa-search"></i>
+            <i id="settings-icon" class="fa fa-gear"></i>
+            <i id="circle-icon" class="fa fa-circle"></i>
+            <h1>Calories Counter</h1>
+            
+         
+        </nav>
+       
+
+        
+    </div>
+   
+    <div class="container">
+        <p>DAILY NUTRITION</p>
+        
+        <label for="file"> Protein</label><br>
+        <progress id="file" max="100" value="5"></progress>
+        <p>Calories</p>
+        <progress id="file" max="100" value="3"> 100% </progress>
+        <p>Carbohydrates</p>
+        <progress id="file" max="100" value="2"> 100% </progress>
+        <p>Cholestorol</p>
+        <progress id="file" max="100" value=""> 40% </progress>
+        <p>Fat</p>
+        <progress id="file" max="100" value="{{final_values}}%"> 40% </progress>
+        <p>Fiber</p>
+        <progress id="file" max="100" value="0"> 40% </progress>
+        <p>Saturated Fat</p>
+        <progress id="file" max="100" value="20"> 40% </progress>
+    
+
+    </div>
+
+    
+    <div class="box-container">
+        <div class="box">
+            <label for="file"> Calories consum today is </label><br>
+            <progress id="file" max="100" value="70"> 40% </progress>
+            <p>Target: 2200</p>
+            <p>Total Calories : 940</p>
+        </div>
+
+        <div class="nutrient">
+            <h2>Nutrition Fact</h2>
+            <div class="fact">
+                <p>Calories <strong> 192 </strong></p>
+                <p>Total Fat <strong> 15% </strong></p>
+                <p>Saturated Fat <strong> 12% </strong></p>
+                <p>Cholesterol <strong> 5% </strong></p>
+                <p>Sodium <strong> 8% </strong></p>
+                <p>Carbohydrates <strong> 8% </strong></p>
+            </div>
+
+        
+        </div>
+
+     <div class="donuts">
+        <img src="{% static 'img/baked-donuts-5.jpg' %}" />
+     </div>
+
+    				
+			
+	 
+    </div> 
+  
+   
+  
+
+  <div class="box-1">
+        <form action="{% url 'add' %}" method="POST">
+            {% csrf_token %}
+            <div class="box-row">
+                {{ form }}
+                <label for="number">Protein</label>
+                <input type="text" name="protein">
+
+                <label for="number">Carbohydrates</label>
+                <input type="text" name="carbohydrates">
+
+                <label for="number"> Cholestorol</label>
+                <input type="text" name="cholestrol">
+            
+            </div>
+            <div class="box-row2">
+
+                <label for="number">Fat</label>
+                <input type="text" name="fat">
+
+                <label for="number">Fiber</label>
+                <input type="text" name="fiber">
+
+                <label for="number">Saturated Fat</label>
+                <input type="text" name="saturated Fat">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+  </div>
+
+
+  <script>
+      function count(){
+        var myprogress = document.getElementsById("number");
+        document.getElementById("file").setAttribute("value", myprogress)
+        var sumprogress = 0;
+
+        var moveid = setInterval(move, values)
+        function move(){
+            for(i=0; i<= myprogress; i++){
+
+                if (sumprogress[i] >= values){
+                    clearInterval(id)
+                }else{
+                    sumprogress[i] = myprogress + value;
+                    totalprogress = sumprogress
+                    
+            }
+        }
+            sumprogress
+        }
+
+
+  /*function progressbarmove(){
+      var move = setInterval(function(){
+        progress.value = progress.value + 1;
+
+      })
+
+*/
+  }
+
+
+  </script>
+</body>
+
+</html>

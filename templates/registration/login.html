@@ -1,0 +1,22 @@
+{%extends "base.html"%}
+    <title>Login</title>
+{% block container %}
+    <body>
+        <div class="container">
+                
+                
+            <center>
+                <p>Try and login</p>
+                <form method="post" action="{% url 'index' %}">
+                {% csrf_token %}
+                    {{form.as_p}}
+                    <input type="submit" value="login" />
+                    <input type="hidden" name="next" value="{{ next }}" />
+                </form>
+                <br>
+                <p>If you want to reset your Password click here <a href="">ResetPassword</a> </p>
+            
+            </center>   
+        </div>
+    </body>
+{% endblock %}
